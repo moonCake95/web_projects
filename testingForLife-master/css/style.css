@@ -1,0 +1,470 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* This defines what 1rem is. */
+  font-size: 62.5%; 
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+}
+
+/* About */
+
+.header {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 95vh;
+  background-size: cover;
+  background-position: top;
+  background-image: linear-gradient(
+    to right bottom, 
+    hsla(0, 0%, 32%, 0.8), 
+    hsla(0, 0%, 0%, 0.8)), 
+    url(../images/header-bg.jpg);
+  position: relative;
+  transition: all .5s;
+}
+
+.text-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.logo-box {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+}
+
+.logo {
+  height: 8rem;
+}
+
+.contactMe {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+}
+
+.contactMe a {
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.person-logo {
+  border: 3px solid white;
+  height: 17vh;
+  margin-bottom: 5rem;
+  border-radius: 100%;
+  animation: moveInBottom 2s;
+  backface-visibility: hidden;
+}
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 6rem;
+}
+
+.heading-primary-main {
+  display: block;
+  font-weight: 900;
+  animation: moveInRight 4s;
+}
+
+.about {
+  color: #ffffff;
+}
+
+.heading-primary-sub {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  width: 70rem;
+  animation-name: moveInLeftText;
+  animation-duration: 4s;
+
+}
+
+/* Carousel */
+#carouselControls {
+  padding: 10rem 0 10rem 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+    to left bottom, 
+    hsla(0, 0%, 100%, 0.9), 
+    hsla(0, 0%, 86%, 0.9)),
+    url(../images/carousel-bg.jpg);
+}
+
+.carousel-item {
+  font-family: 'Ubuntu';
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.carousel-item h2 {
+  font-weight: 700;
+}
+
+.carousel-item p {
+  width: 23%;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* form */
+form {
+  padding: 0 3.2rem;
+}
+
+form button {
+  margin-bottom: 1.6rem;
+}
+
+#form {
+  background-image:linear-gradient(
+    to right top,
+    hsla(0, 0%, 32%, 0.8), 
+    hsla(0, 0%, 0%, 0.8)
+  );
+  position: relative;
+}
+
+.heading-text {
+  color: #ffffff;
+  text-align: center;
+}
+
+.heading {
+  font-weight: 700;
+  padding: 1.6rem 0 1.6rem 0;
+  margin: 0 20rem;
+  font-size: 4rem;
+}
+
+.form {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.form-control {
+  width: 75%;
+  font-size: 1.5rem;
+  margin: 0rem 20rem .8rem 20rem;
+}
+
+.form .form-control {
+  border-radius: 3px;
+  transition: all .3s;
+}
+
+.form .form-control:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #55c57a;
+}
+
+.form-control:focus:invalid {
+  border-bottom: 3px solid #ff3030; 
+}
+
+.form-control::placeholder {
+  font-size: 1.2rem;
+  color:darkgray;
+}
+
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer  p{
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: #777;
+  background-image: linear-gradient(
+    to right bottom,
+    hsla(0, 0%, 100%, 0.9), 
+    hsla(0, 0%, 86%, 0.9));
+  text-align: center;
+  padding: 2.5rem 2.5rem;
+  margin: 0;
+}
+
+
+/* Animation for Logo */
+
+@keyframes moveInBottomLogo {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for Name-About */
+
+@keyframes moveInBottom{
+  0% {
+    opacity: 0;
+    transform: translateY(-35rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30rem); 
+  }
+
+  80% {
+    transform: translateX(-5rem); 
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0); 
+  } 
+}
+
+/* Animation for About-Text */
+
+@keyframes moveInLeftText {
+  0% {
+    opacity: 0;
+    transform: translateX(-30rem);
+  }
+
+  80% {
+    transform: translateX(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 90em) {
+
+  .carousel-item h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-item p {
+    font-size: 1.7rem;
+    width: 37%
+  }
+
+  .form-control {
+    margin: 0 15rem;
+  }
+}
+
+/* ///////////////////////////// 1200px //////////////////////////////////////  */
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .carousel-item h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .carousel-item p {
+    font-size: 1.6rem;
+    text-align: center;
+    width: 36%;
+  }
+
+  .form-control {
+    width: 70%;
+    margin: 0 16.6666667rem;
+  }
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////// 900px //////////////////////////////////////  */
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .header {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////// 600px //////////////////////////////////////  */
+
+@media (max-width: 37.5em) {
+  .header {
+    height: 135vh;
+  }
+
+  .heading-primary-sub {
+    width: 88vw;
+    padding: 3rem;
+  }
+
+  .contactMe a{ 
+    top: 4.5rem;
+    right: 4.5rem;
+    font-size: 2rem;
+  }
+
+  .carousel-item {
+    padding: 1rem;
+  }
+
+  .carousel-item p {
+    width: 80%;
+  }
+
+  .form .heading {
+    font-size: 3.5rem;
+    margin: 0 10rem;
+  }
+
+  .form-control {
+    height: 4.375rem;
+    font-size: 1.8rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .form-control::placeholder {
+    font-size: 1.7rem;
+  }
+  
+  .btn {
+    font-size: 2rem;
+  }
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////// 400px //////////////////////////////////////  */
+
+@media (max-width: 25em) {
+
+  .header {
+    height: 150vh;
+  }
+
+  .logo {
+    height: 6rem;
+  }
+
+  .contactMe a {
+    font-size: 1.7rem;
+  }
+
+  .heading-primary-sub {
+    width: 87.5vw;
+    text-align: left;
+  }
+
+  .carousel-item p {
+    width: 86%;
+  }
+
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////// 384px //////////////////////////////////////  */
+
+@media (max-width: 24em) {
+  .header {
+    height: 140vh;
+  }
+
+  .heading-primary-sub {
+    width: 85vw;
+    padding: 1.5rem;
+  }
+
+  .carousel-item p {
+    width: 90%;
+  }
+
+  #carouselControls {
+    padding: 15rem 0 15rem 0;
+    background-position: right;
+  }
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////// 368px //////////////////////////////////////  */
+
+@media (max-width: 23em) {
+  .logo {
+    height: 5rem;
+  }
+
+  .contactMe a {
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////// 1800+px //////////////////////////////////////  */
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 65%;
+  }
+}
+
+/* Ubuntu google font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
